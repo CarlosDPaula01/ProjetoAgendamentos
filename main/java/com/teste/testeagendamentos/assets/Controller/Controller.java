@@ -1,4 +1,4 @@
-package com.teste.testeagendamentos.classes.Controller;
+package com.teste.testeagendamentos.assets.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

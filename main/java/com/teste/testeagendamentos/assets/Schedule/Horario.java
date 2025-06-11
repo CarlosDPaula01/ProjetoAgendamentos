@@ -1,6 +1,6 @@
-package com.teste.testeagendamentos.classes.Schedule;
+package com.teste.testeagendamentos.assets.Schedule;
 
-import com.teste.testeagendamentos.classes.Cliente.Cliente;
+import com.teste.testeagendamentos.assets.Cliente.Cliente;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
