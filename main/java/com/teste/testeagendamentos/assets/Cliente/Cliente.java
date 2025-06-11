@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.ArrayList;
 
@@ -16,11 +17,20 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String nome;
+
     private String email;
+
     private String numero;
+
     private boolean horarioagendado;
+
+    // @OneToMany para um cliente receber varios horarios.
+    @OneToMany(mappedBy = "cliente")
     private ArrayList<Horario> horarios;
+
+
 
     public Cliente(String nome, String email, String numero){
         this.nome = nome;
@@ -28,8 +38,6 @@ public class Cliente {
         this.numero = numero;
         horarioagendado = false;
     }
-
-
 
 
     public void verificarAgendamento(Cliente cliente){
