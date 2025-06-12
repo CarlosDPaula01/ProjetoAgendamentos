@@ -1,4 +1,4 @@
-package com.teste.testeagendamentos.assets.Scheduler;
+package com.teste.testeagendamentos.service.Scheduler;
 
 public class Scheduler {
 

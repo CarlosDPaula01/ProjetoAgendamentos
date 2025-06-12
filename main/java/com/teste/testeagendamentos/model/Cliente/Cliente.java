@@ -1,4 +1,4 @@
-package com.teste.testeagendamentos.assets.Cliente;
+package com.teste.testeagendamentos.model.Cliente;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.ArrayList;
 
-import com.teste.testeagendamentos.assets.Schedule.*;
+import com.teste.testeagendamentos.model.Schedule.*;
 
 @Entity
 @Table(name = "tb_clientes")
