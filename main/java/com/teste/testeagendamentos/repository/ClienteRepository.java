@@ -6,4 +6,6 @@ import com.teste.testeagendamentos.model.Cliente.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
+    boolean findById();
+
 }

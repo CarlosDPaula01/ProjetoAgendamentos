@@ -42,4 +42,26 @@ public class service {
     public String desmarcarHorario(){
         return "o horario foi desmarcado";
     }
+
+    public String verHorarioMarcado(Cliente cliente){
+        String retorno = null;
+        for(Horario horario : cliente.getHorarios()){
+            retorno += horario.getHorario();
+        }
+        return String.format("Os horarios do cliente $s são:" + retorno, cliente.getNome());
+    }
+
+    public void verificarAgendamento(Cliente cliente){
+        if(clienteRepository.existsById(cliente.getID())){
+            if(cliente.getHorarioAgendado()){
+                verHorarioMarcado(cliente);
+            }
+            else{
+                System.err.printf("o cliende $s não tem horario marcado", cliente.getNome());
+            }
+        }
+        else{
+            System.err.printf("o cliente $s não existe", cliente.getNome());
+        }
+    }
 }

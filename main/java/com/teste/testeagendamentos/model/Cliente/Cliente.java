@@ -40,23 +40,6 @@ public class Cliente {
     }
 
 
-    public void verificarAgendamento(Cliente cliente){
-        if(horarioagendado){
-            cliente.verHorarioMarcado();
-        }
-        else{
-            System.err.printf("O cliente $s não tem horario marcado", this.nome);
-        }
-    }
-
-    public String verHorarioMarcado(){
-        String retorno = null;
-        for(Horario horario : horarios){
-            retorno += horario.getHorario();
-        }
-        return String.format("os horarios do cliente $s são:" + retorno, nome);
-    }
-
     @Override
     public String toString(){
         return nome;
@@ -65,5 +48,17 @@ public class Cliente {
     
     public String getNome(){
         return nome;
+    }
+
+    public Long getID(){
+        return id;
+    }
+
+    public boolean getHorarioAgendado(){
+        return horarioagendado;
+    }
+
+    public ArrayList<Horario> getHorarios(){
+        return horarios;
     }
 }
